@@ -25,4 +25,6 @@ RUN rm -rf /var/www/html \
     && ln -s /var/www/public /var/www/html \
     && chown -R www-data:www-data /var/www
 
+RUN docker-php-ext-install pdo pdo_pgsql
+
 EXPOSE 80
