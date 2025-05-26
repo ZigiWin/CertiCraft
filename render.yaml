@@ -7,5 +7,3 @@ services:
     repo: https://github.com/ZigiWin/CertiCraft
     branch: main
     autoDeploy: true
-    buildCommand: ""
-    startCommand: ""
