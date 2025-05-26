@@ -1,19 +1,13 @@
 <?php
-$host = 'dpg-d0qdjlodl3ps73esect0-a';
-$port = 5432;
-$dbname = 'certicraft';
-$user = 'admin';
-$password = 'HwR6Pv9v2QIRogC3NeH2s8hWT1lXSOJl';
+$servername = "sql305.infinityfree.com";
+$username = "if0_39087838";
+$password = "7uZcBp17M8FN1n";
+$database = "if0_39087838_certicraft"; 
 
-$dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
+$conn = new mysqli($servername, $username, $password, $database);
 
-try {
-    $pdo = new PDO($dsn, $user, $password, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Включить выброс исключений при ошибках
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC // Удобный режим выборки
-    ]);
-    echo "Подключение к PostgreSQL через PDO успешно!";
-} catch (PDOException $e) {
-    die("Ошибка подключения: " . $e->getMessage());
+// Проверка подключения
+if ($conn->connect_error) {
+    die("Ошибка подключения: " . $conn->connect_error);
 }
 ?>
