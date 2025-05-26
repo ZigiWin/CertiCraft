@@ -8,3 +8,4 @@ services:
     branch: main
     autoDeploy: true
     buildCommand: ""
+    startCommand: ""
