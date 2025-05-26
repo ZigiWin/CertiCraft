@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: certicraft
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile.txt
+    repo: https://github.com/ZigiWin/CertiCraft
+    branch: main
+    autoDeploy: true

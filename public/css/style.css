@@ -1,0 +1,398 @@
+/* Общие стили для body */
+body {
+    font-family: "Oswald", serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Заголовок страницы */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+/* Ссылки в меню */
+.link {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #615F5F;
+}
+
+/* Переключатели */
+.switch-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    user-select: none;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    width: 140px;
+}
+
+.switch.active {
+    font-weight: bold;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 105px;
+    background-color: #8A56E3;
+    transition: left 0.3s ease;
+}
+
+.underline.left {
+    left: 6%;
+}
+
+.underline.right {
+    left: 46%;
+}
+
+/* Фотография профиля */
+.profile-photo {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Стиль для кнопок переключателей */
+.switch-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Стиль для текста в переключателях */
+.switch span {
+    display: flex;
+    align-items: center;
+    color: #615F5F;
+}
+
+/* Текст для шаблонов */
+.shablon-text {
+    width: auto;
+    height: 50px;
+    margin-left: 90px;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 9.5px;
+    color: #615F5F;
+}
+
+/* Кнопка закрытия меню */
+.close-menu {
+    position: absolute;
+    top: 37.5px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.close-menu img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Модели меню */
+.menu-model {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-top: 24px;
+    width: 300px;
+    height: 50px;
+    border: solid 2px #D9D9D9;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.menu-model p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    color: #615F5F;
+}
+
+/* Кнопка открытия меню */
+.open-menu {
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+.open-menu img {
+    width: 20px;
+    height: 20px;
+}
+
+/* --------------------------------------- Меню категорий --------------------------------------- */
+/* --------------------------------------- Меню категорий --------------------------------------- */
+/* Меню категорий */
+#category-menu {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute;
+    bottom: 70px; /* Устанавливаем меню выше кнопок (расстояние от нижнего края экрана) */
+    left: 0;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Меню категорий при открытии */
+#category-menu.open {
+    display: block; /* Показываем меню */
+}
+
+#category-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#category-menu ul li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #615F5F;
+}
+
+#category-menu ul li:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Стили для контейнера с иконками */
+.icon-btn-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+
+/* --------------------------------------- Меню шаблонов (выезжающее слева) --------------------------------------- */
+.sidebar.templates {
+    position: fixed;
+    top: 60px;
+    left: -340px; /* Скрытое меню шаблонов слева */
+    width: 336px;
+    height: 100%;
+    background-color: white;
+    transition: left 0.3s ease; /* Анимация сдвига меню слева */
+    padding-top: 20px;
+    z-index: 999;
+    border: solid 2px #D9D9D9;
+    border-top-right-radius: 5px;
+}
+
+.sidebar.templates.open {
+    left: 0; /* При открытии меню сдвигается на 0 (выезжает слева) */
+}
+
+.shablon-container{
+    display: flex !important;
+    flex-wrap: wrap;
+    width: 240px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+
+.shablon {
+    max-width: 240px ;
+    padding: 0px;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.shablon-img {
+    width: 100px;
+    height: 141px;
+}
+
+
+/* --------------------------------------- Меню рамок (выезжающее справа) --------------------------------------- */
+.sidebar.frames {
+    position: fixed;
+    top: 60px;
+    right: -340px; /* Скрытое меню рамок справа */
+    width: 316.5px;
+    height: 100%;
+    background-color: white;
+    padding-top: 20px;
+    padding-right: 20px;
+    z-index: 999;
+    border: solid 2px #D9D9D9;
+    border-top-left-radius: 5px;
+    transition: right 0.3s ease; /* Анимация сдвига меню справа */
+}
+
+.sidebar.frames.open {
+    right: 0; 
+}
+
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-btn img {
+    width: 100%;
+    height: auto;
+}
+
+/* Блок с кнопками и категориями */
+.bottom-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-btn img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center; /* Центрирование кнопок навигации */
+}
+
+/* Стили для кнопок навигации */
+.nav-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.nav-btn img {
+    width: 100%;
+    height: auto;
+}
+
+/* Центрирование кнопок навигации */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* Стили для кнопок категорий */
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon-btn img {
+    width: 100%;
+    height: auto;
+}
+
+.icon-btn-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+#canvas{
+    background-color:#f0f0f0;
+    width:600px ;
+    height:800px ;
+    margin-bottom: 20px;
+}
+
+.editable-text {
+    border: 2px solid blue; 
+    padding: 5px;
+    background-color: white;
+    resize: both;
+    overflow: auto;
+    position: absolute;
+}
+
+
+
+
+

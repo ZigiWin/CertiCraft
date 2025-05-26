@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.error-container {
+    text-align: center;
+}
+
+h1 {
+    width: 275px;
+    height: 154px;
+    font-size: 128px;
+    color: #8A56E3;  
+    font-style: Black;
+}
+
+h2 {
+    font-size: 30px;
+    color: #8A56E3;
+    margin-top: 10px;
+}
